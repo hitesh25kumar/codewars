@@ -1,0 +1,25 @@
+# Isogram problem solution 
+## Isogram means a word without any repeating letter.
+
+```
+function isIsogram(str){
+  var word = str.length;
+  if ( word == 0 ) {
+    return true;
+  } else {
+    var lowerword = str.toLowerCase();
+    var lowword = lowerword.split("");
+    for ( var i = 0; i < word; i++ )
+    {
+      var checkword = lowword[i];
+      var countword = lowword.reduce( function( n, val ) {
+        return n + (val === checkword);
+      }, 0);
+     if ( countword > 1 ) {
+        return false;
+      }
+    }  
+    return true; 
+  }
+}
+```
