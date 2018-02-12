@@ -12,5 +12,5 @@ function squareDigits(num){
 }
 ```
 The push() method adds new items to the end of an array, and returns the new length.
-## The join() method joins the elements of an array into a string, and returns the string.
-## The Number() function converts the object argument to a number that represents the object's value.
+ The join() method joins the elements of an array into a string, and returns the string.
+ The Number() function converts the object argument to a number that represents the object's value.
