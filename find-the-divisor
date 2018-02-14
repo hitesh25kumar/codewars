@@ -1,0 +1,15 @@
+# Find the divisor
+
+```
+function divisors(integer) {
+  var result = [];
+for(i=2;i<=Math.floor(integer/2);i++)
+{
+if(integer% i ==0) result.push(i);
+}
+return result.length ? result : integer + " is prime";
+}
+```
+
+Math.floor is used for rounded integer to down like 5.7 = 5
+? is used to match a string that has 0 or 1 occurence of result.length
