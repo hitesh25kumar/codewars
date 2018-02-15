@@ -1,0 +1,32 @@
+# Print all the permutation combinations of a string.
+
+```
+function permutations(string) {
+ var permutation = [];
+ if(string.length <2) 
+{
+permutation.push(string);
+return permutation;
+}
+else
+{
+
+for(var i=0;i<string.length;i++)
+{
+var char=string[i];
+if(string.indexOf(char)!=i)
+continue;
+var remstr = string.slice(0,i) + string.slice(i+1,string.length);
+for(var subpermutations of permutations(remstr))
+{
+permutation.push(char + subpermutations);
+}
+}
+}
+return permutation;
+}
+
+```
+
+At line 17 if(string.indexOf(char)!=i) is used to check if any char is already used
+ skip this step to protect from duplicates.
