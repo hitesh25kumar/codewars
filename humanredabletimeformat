@@ -1,0 +1,18 @@
+# Human redable time format
+
+```
+function humanReadable(seconds) {
+if(seconds>=359999)
+{
+return "99:59:59";
+}
+var date = new Date(null);
+date.setSeconds(seconds); 
+var result = date.toISOString().substr(11, 8);
+return result;
+}
+```
+Date function is used to get the date
+setSeconds method is used to convert seconds into hh:mm:ss format
+The toISOString() method converts a Date object into a string, using the ISO standard.
+substr is used to cut time from date.
